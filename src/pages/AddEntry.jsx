@@ -1,5 +1,5 @@
 import React from "react";
-
+import axios, * as others from "axios";
 import NavigationBar from "../NavigationBar";
 
 import {
@@ -12,12 +12,24 @@ import {
 } from "react-bootstrap";
 
 function AddEntry() {
+  function handlesubmit(event){
+    axios.post('http://localhost:3000/posts', {
+      Name: 'Fred',
+      Number: 'Flintstone'
+    })
+    .then(function (response) {
+      console.log(response);
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  }
   return (
     <div>
       <NavigationBar />
       <Container className="centerText">
         <h1> Add New Entry</h1>
-        <Form>
+        <Form onSubmit={handlesubmit}>
           <Row>
             <Dropdown className="marginBottom">
               <Dropdown.Toggle>Phonebook</Dropdown.Toggle>

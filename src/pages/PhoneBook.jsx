@@ -1,9 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Container, FloatingLabel, Form, Dropdown } from "react-bootstrap";
-
+import axios, * as others from "axios";
 import NavigationBar from "../NavigationBar";
 
+
 function PhoneBook() {
+  useEffect(( )=>{
+    axios.get('http://localhost:3000/posts') .then(function (response) {   console.log(response); }) .catch(function (error) {  console.log(error); }) ;
+  })
   return (
     <div>
       <NavigationBar />
