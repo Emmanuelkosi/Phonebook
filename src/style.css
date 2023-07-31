@@ -1,0 +1,21 @@
+h1 {
+  padding: 5% 0;
+}
+
+.buttonPadding {
+  margin: 3%;
+  width: 80px;
+  text-align: center;
+}
+
+.centerText {
+  text-align: center;
+}
+
+.marginBottom {
+  margin-bottom: 60px;
+}
+
+/* .floatlabelWidth {
+  width: 40%;
+} */
